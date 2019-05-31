@@ -44,9 +44,9 @@ create sequence actionexporter.contactpkseq start 1 increment 1;
         address_line3 varchar(255),
         locality varchar(255),
         longitude numeric(19, 2),
-        organisationName varchar(255),
+        organisation_name varchar(255),
         postcode varchar(255),
-        townName varchar(255),
+        town_name varchar(255),
         primary key (addresspk)
     );
 
