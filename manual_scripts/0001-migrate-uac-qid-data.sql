@@ -13,4 +13,4 @@ SELECT uac, qid, unique_number from casev2.uac_qid_link;
 
 SELECT setval('uacqid.uac_qid_unique_number_seq', COALESCE((SELECT last_value FROM casev2.uac_qid_link_unique_number_seq), 1), false);
 
-DROP SCHEMA iac CASCASE ALL;
+DROP SCHEMA iac CASCADE;
