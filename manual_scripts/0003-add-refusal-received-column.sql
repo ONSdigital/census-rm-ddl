@@ -8,7 +8,7 @@
 -- ****************************************************************************
 
 ALTER TABLE casev2.cases
-ADD refusal_received BOOLEAN NOT NULL DEFAULT false;
+ADD COLUMN refusal_received BOOLEAN NOT NULL DEFAULT false;
 
 ALTER TABLE actionv2.cases
-ADD refusal_received BOOLEAN NOT NULL DEFAULT false;
+ADD COLUMN refusal_received BOOLEAN NOT NULL DEFAULT false;

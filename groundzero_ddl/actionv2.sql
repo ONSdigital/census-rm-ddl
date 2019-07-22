@@ -43,6 +43,7 @@
         oa varchar(255),
         organisation_name varchar(255),
         postcode varchar(255),
+        refusal_received boolean NOT NULL DEFAULT false,
         region varchar(255),
         state varchar(255),
         town_name varchar(255),
