@@ -9,7 +9,7 @@
 -- ********************************************
 
 INSERT INTO actionv2.action_plan (id, description, name)
-VALUES ('432f0597-0076-4adb-834b-bf249dc06ded', 'Census rehearsal 2019 action plan', 'Census rehearsal 2019')
+VALUES ('432f0597-0076-4adb-834b-bf249dc06ded', 'Census rehearsal 2019 action plan', 'Census rehearsal 2019');
 
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id)
 VALUES ('f827ab9b-9d57-4acf-aba8-abf6e9ce8bd2', 'P_IC_H1',
