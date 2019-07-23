@@ -8,6 +8,9 @@
 -- *** Author: R Weeks                      ***
 -- ********************************************
 
+INSERT INTO actionv2.action_plan (id, description, name)
+VALUES ('432f0597-0076-4adb-834b-bf249dc06ded', 'Census rehearsal 2019 action plan', 'Census rehearsal 2019')
+
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id)
 VALUES ('f827ab9b-9d57-4acf-aba8-abf6e9ce8bd2', 'P_IC_H1',
         '{"treatmentCode": ["HH_QF2R1E", "HH_QF2R2E", "HH_QF2R3AE", "HH_QF3R1E", "HH_QF3R2E", "HH_QF3R3AE", "HH_QFNR1E", "HH_QFNR2E", "HH_QFNR3AE"]}',
@@ -43,12 +46,3 @@ VALUES ('525d44e8-39b2-43c2-8321-df5d8e42d4dd', 'P_IC_ICL4',
         '{"treatmentCode": ["HH_1LSFN",  "HH_2LEFN"]}',
         '2019-08-14 06:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded'
         );
-
-
-
-
-
-
-
-
-
