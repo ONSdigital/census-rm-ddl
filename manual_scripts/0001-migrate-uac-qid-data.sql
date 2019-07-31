@@ -60,7 +60,7 @@ DROP COLUMN unique_number;
 
 -- Must be done after Case Processor updates
 
-UPDATE casev2.event SET event_channel = 'RM', event_source = 'CASE_SERVICE', event_transaction_id = uuid_generate_v4(), event_payload = '{}';
+UPDATE casev2.event SET event_channel = 'RM', event_source = 'CASE_SERVICE', event_transaction_id = (SELECT uuid_in(md5(random()::text || clock_timestamp()::text)::cstring)), event_payload = '{}' WHERE 1=1;
 
 -- Updates to Action Scheduler
 
