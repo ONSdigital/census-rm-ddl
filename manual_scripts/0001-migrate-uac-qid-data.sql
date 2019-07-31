@@ -61,8 +61,5 @@ UPDATE casev2.event SET event_channel = 'RM', event_source = 'CASE_SERVICE', eve
 -- Updates to Action Scheduler
 
 ALTER TABLE actionv2.cases
-ADD receipt_received boolean;
-
-ALTER TABLE actionv2.cases
 ALTER COLUMN case_ref TYPE integer;
 
