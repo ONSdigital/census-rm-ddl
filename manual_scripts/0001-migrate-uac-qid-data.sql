@@ -12,8 +12,6 @@
 
 create schema uacqid;
 
-alter schema uacqid owner to postgres;
-
 create table if not exists uacqid.uac_qid
 (
 	uac varchar(255) not null
@@ -22,8 +20,6 @@ create table if not exists uacqid.uac_qid
 	qid varchar(255),
 	unique_number serial not null
 );
-
-alter table uacqid.uac_qid owner to postgres;
 
 -- Move UAC/QID Pair data
 
