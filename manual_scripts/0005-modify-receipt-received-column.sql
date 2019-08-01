@@ -1,7 +1,7 @@
 -- ****************************************************************************
 -- *** MANUAL RM SQL DATABASE UPDATE SCRIPT                                 ***
 -- ****************************************************************************
--- *** Number: 0006                                                         ***
+-- *** Number: 0005                                                         ***
 -- *** Purpose: Modified case columum 'receipt_received' in actionv2        ***
 -- ***          & casev2 schemas to be not null and default to false.       ***
 -- ***          Existing data is set to false if null                       ***
