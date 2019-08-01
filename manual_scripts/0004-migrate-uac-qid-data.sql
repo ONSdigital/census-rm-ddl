@@ -3,8 +3,8 @@
 -- ********************************************
 -- *** Number: 0004                         ***
 -- *** Purpose: Change case ref type in     ***
--- ***          Action Processor.            ***
--- *** Autor: R Weeks                       ***
+-- ***          Action Processor.           ***
+-- *** Author: R Weeks                      ***
 -- ********************************************
 
 -- Updates to Action Scheduler
