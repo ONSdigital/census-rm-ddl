@@ -1,7 +1,7 @@
 -- ********************************************
 -- *** MANUAL RM SQL DATABASE UPDATE SCRIPT ***
 -- ********************************************
--- *** Number: 0002                         ***
+-- *** Number: 0005                         ***
 -- *** Purpose: Create Action Rules for     ***
 -- ***          Initial contact letters     ***
 -- ***          and Initial contact PQs.    ***

@@ -1,7 +1,7 @@
 -- ****************************************************************************
 -- *** MANUAL RM SQL DATABASE UPDATE SCRIPT                                 ***
 -- ****************************************************************************
--- *** Number: 0004                                                         ***
+-- *** Number: 0007                                                         ***
 -- *** Purpose: Add new case column 'refusal_received' in actionv2          ***
 -- ***          & casev2 schemas set to be not null and default to false    ***
 -- *** Author: Liam Toozer, Hugh Brace, Ade                                 ***
