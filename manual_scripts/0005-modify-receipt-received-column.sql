@@ -17,11 +17,5 @@ ALTER TABLE casev2.cases
 ALTER TABLE casev2.cases
     ALTER COLUMN receipt_received SET DEFAULT false;
 
-UPDATE actionv2.cases
-SET receipt_received = false
-WHERE receipt_received ISNULL;
-
 ALTER TABLE actionv2.cases
-    ALTER COLUMN receipt_received SET NOT NULL;
-ALTER TABLE actionv2.cases
-    ALTER COLUMN receipt_received SET DEFAULT false;
+    ADD COLUMN IF NOT EXISTS receipt_received BOOLEAN NOT NULL DEFAULT false;
