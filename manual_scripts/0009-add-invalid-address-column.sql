@@ -2,7 +2,7 @@
 -- *** MANUAL RM SQL DATABASE UPDATE SCRIPT                                 ***
 -- ****************************************************************************
 -- *** Number: 0009                                                         ***
--- *** Purpose: Add new case column 'refusal_received' in actionv2          ***
+-- *** Purpose: Add new case column 'address_invalid' in actionv2           ***
 -- ***          & casev2 schemas set to be not null and default to false    ***
 -- *** Author: Nick Grant                                                   ***
 -- ****************************************************************************
