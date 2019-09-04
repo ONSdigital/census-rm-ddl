@@ -13,7 +13,7 @@ VALUES ('cccee178-5cb9-4276-8bdb-ce090a40bac3', 'Census rehearsal 2019 WOC Remin
 -- RL 1
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('4656993a-49fe-479c-8246-fde27b9c51f7', 'P_RL_1RL1_1',
-        '{"treatmentCode": ["HH_LF2R1E", "HH_LF3R1E", "HH_LFNR1E, "HH_QF2R1E", "HH_QF3R1E", "HH_QFNR1E"]}',
+        '{"treatmentCode": ["HH_LF2R1E", "HH_LF3R1E", "HH_LFNR1E", "HH_QF2R1E", "HH_QF3R1E", "HH_QFNR1E"]}',
         '2019-10-14 06:00:00.0000', 'cccee178-5cb9-4276-8bdb-ce090a40bac3', 'f');
 
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
@@ -61,4 +61,4 @@ VALUES ('464f9e4d-1682-4fdf-b09d-8d41c3f6f771', 'P_QU_H1',
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('8df621ae-9f7a-4902-b3b5-7207e822ec82', 'P_QU_H2',
         '{"treatmentCode": ["HH_LF2R3BW", "HH_LF3R3BW", "HH_LFNR3BW"]}',
-        '', 'cccee178-5cb9-4276-8bdb-ce090a40bac3', 'f');
+        '2019-10-29 06:00:00.0000', 'cccee178-5cb9-4276-8bdb-ce090a40bac3', 'f');
