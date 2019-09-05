@@ -1,7 +1,7 @@
 -- ********************************************
 -- *** MANUAL RM SQL DATABASE UPDATE SCRIPT ***
 -- ********************************************
--- *** Number: 0008                         ***
+-- *** Number: 0007                         ***
 -- *** Purpose: Create case type column     ***
 -- ***          and set to HH for existing  ***
 -- ***          cases.                      ***
