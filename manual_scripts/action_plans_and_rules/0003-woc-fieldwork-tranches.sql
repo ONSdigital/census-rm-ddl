@@ -46,11 +46,13 @@ VALUES ('5e32f081-56bf-4a59-9b84-aede58d65943', 'FIELD',
         '{"treatmentCode": ["HH_2LEFN"]}',
         '2019-10-30 12:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
+
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('415d2e39-5df7-497c-9611-e90ac44fb100', 'FIELD',
         '{"treatmentCode": ["HH_1LSFN", "HH_3QSFN"]}',
          '2019-11-06 12:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
+-- Tranche 4
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('f259b941-75f5-42e8-9ea9-ac816c1003f9', 'FIELD',
         '{"treatmentCode": ["HH_2LEFN"]}',
