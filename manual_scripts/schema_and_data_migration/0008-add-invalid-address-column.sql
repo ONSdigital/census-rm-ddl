@@ -1,7 +1,7 @@
 -- ****************************************************************************
 -- *** MANUAL RM SQL DATABASE UPDATE SCRIPT                                 ***
 -- ****************************************************************************
--- *** Number: 0009                                                         ***
+-- *** Number: 0008                                                         ***
 -- *** Purpose: Add new case column 'address_invalid' in actionv2           ***
 -- ***          & casev2 schemas set to be not null and default to false    ***
 -- *** Author: Nick Grant                                                   ***
