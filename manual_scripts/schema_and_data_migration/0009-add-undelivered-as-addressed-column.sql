@@ -1,7 +1,7 @@
 -- ****************************************************************************
 -- *** MANUAL RM SQL DATABASE UPDATE SCRIPT                                 ***
 -- ****************************************************************************
--- *** Number: 0010                                                         ***
+-- *** Number: 0009                                                         ***
 -- *** Purpose: Add new case column 'undelivered_as_addressed' in actionv2  ***
 -- ***          & casev2 schemas set to be not null and default to false    ***
 -- *** Author: Nick Grant                                                   ***
