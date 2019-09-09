@@ -1,7 +1,7 @@
 -- ********************************************
 -- *** MANUAL RM SQL DATABASE UPDATE SCRIPT ***
 -- ********************************************
--- *** Number: 0010                         ***
+-- *** Number: 0004                         ***
 -- *** Purpose: Create action plans and     ***
 -- *** rules for woc reminders              ***
 -- *** Author: L Loze                       ***
