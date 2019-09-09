@@ -1,7 +1,7 @@
 -- ********************************************
 -- *** MANUAL RM SQL DATABASE UPDATE SCRIPT ***
 -- ********************************************
--- *** Number: 0012                         ***
+-- *** Number: 0011                         ***
 -- *** Purpose: Create and grant            *** 
 -- *** permissions on rm read only access   ***
 -- *** role                                 ***
