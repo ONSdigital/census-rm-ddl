@@ -12,28 +12,28 @@
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('4656993a-49fe-479c-8246-fde27b9c51f7', 'P_RL_1RL1_1',
         '{"treatmentCode": ["HH_LF2R1E", "HH_LF3R1E", "HH_LFNR1E", "HH_QF2R1E", "HH_QF3R1E", "HH_QFNR1E"]}',
-        '2019-10-14 06:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
+        '2019-10-14 05:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('c74ef330-f634-4bb3-a3ad-540fd5eddf0f', 'P_RL_1RL2B_1',
         '{"treatmentCode": ["HH_LF2R1W", "HH_LF3R1W", "HH_LFNR1W", "HH_QF2R1W", "HH_QF3R1W", "HH_QFNR1W"]}',
-        '2019-10-14 06:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
+        '2019-10-14 05:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('5555a4ae-15a9-41b6-a0d5-59ae2b7239f2', 'P_RL_1RL4',
         '{"treatmentCode": ["HH_2LEFN", "HH_1LSFN", "HH_3QSFN"]}',
-        '2019-10-17 06:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
+        '2019-10-17 05:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
 --RL 2
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('eed6deb9-7dfd-44b8-882b-43e89a40f478', 'P_RL_1RL1_2',
         '{"treatmentCode": ["HH_LF2R2E", "HH_LF3R2E", "HH_LFNR2E", "HH_QF2R2E", "HH_QF3R2E", "HH_QFNR2E"]}',
-        '2019-10-21 06:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
+        '2019-10-21 05:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('c4e2fcbe-bfdd-4624-88c3-39145b7ae82b', 'P_RL_1RL2B_2',
         '{"treatmentCode": ["HH_LF2R2W", "HH_LF3R2W", "HH_LFNR2W", "HH_QF2R2W", "HH_QF3R2W", "HH_QFNR2W"]}',
-        '2019-10-21 06:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
+        '2019-10-21 05:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('61e573aa-5ccf-4f5e-874e-fbe856506426', 'P_QU_H4',
