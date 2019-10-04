@@ -12,21 +12,21 @@
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('bb5dffb2-8148-400f-b2b8-16600141b707', 'FIELD',
         '{"treatmentCode": ["HH_2LEFN"]}',
-        '2019-10-16 12:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
+        '2019-10-16 11:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('bd14f0c1-15c1-4385-b1f8-33deaf0ec840', 'FIELD',
         '{"treatmentCode": ["HH_1LSFN", "HH_3QSFN"]}',
-        '2019-10-25 12:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
+        '2019-10-25 11:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
 -- Tranche 2
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('037a3e0c-42b3-4b95-8b90-79e3344b0a97', 'FIELD',
         '{"treatmentCode": ["HH_LF2R1E", "HH_LF2R1W", "HH_LF2R2E", "HH_LF2R2W", "HH_LF2R3AE", "HH_LF2R3AW", "HH_LF2R3BE", "HH_LF2R3BW", "HH_QF2R1E", "HH_QF2R1W", "HH_QF2R2E", "HH_QF2R2W", "HH_QF2R3AE", "HH_QF2R3AW"]}',
-        '2019-10-14 12:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
+        '2019-10-14 11:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
 -- Tranche 3
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('074cf6e4-13be-43b2-bf0d-2c6b8ab0a873', 'FIELD',
         '{"treatmentCode": ["HH_LF3R1E", "HH_LF3R1W", "HH_LF3R2E", "HH_LF3R2W", "HH_LF3R3AE", "HH_LF3R3AW", "HH_LF3R3BE", "HH_LF3R3BW", "HH_QF3R1E", "HH_QF3R1W", "HH_QF3R2E", "HH_QF3R2W", "HH_QF3R3AE", "HH_QF3R3AW"]}',
-        '2019-10-21 12:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
+        '2019-10-21 11:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
