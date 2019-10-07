@@ -22,7 +22,7 @@ VALUES ('c74ef330-f634-4bb3-a3ad-540fd5eddf0f', 'P_RL_1RL2B_1',
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
 VALUES ('5555a4ae-15a9-41b6-a0d5-59ae2b7239f2', 'P_RL_1RL4',
         '{"treatmentCode": ["HH_2LEFN", "HH_1LSFN", "HH_3QSFN"]}',
-        '2019-10-17 05:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
+        '2019-10-16 05:00:00.0000', '432f0597-0076-4adb-834b-bf249dc06ded', 'f');
 
 --RL 2
 INSERT INTO actionv2.action_rule (id, action_type, classifiers, trigger_date_time, action_plan_id, has_triggered)
