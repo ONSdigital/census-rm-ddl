@@ -10,6 +10,10 @@
 -- *** Author: Liam Toozer                  ***
 -- ********************************************
 
+-- Drop our existing (non-unique) constraints & indexes first
+ALTER TABLE actionv2.cases DROP CONSTRAINT IF EXISTS case_id_idx;
+DROP INDEX IF EXISTS casev2.case_id_idx;
+
 ALTER TABLE actionv2.cases
     ADD CONSTRAINT case_id UNIQUE (case_id);
 
