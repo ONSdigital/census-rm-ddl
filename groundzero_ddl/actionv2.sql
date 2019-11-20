@@ -88,7 +88,7 @@ CREATE INDEX receipt_received_idx ON actionv2.cases (receipt_received);
 
 CREATE INDEX treatment_code_idx ON actionv2.cases (treatment_code);
 
-CREATE INDEX case_id_uac_qid_link_idx ON uac_qid_link (case_id);
+CREATE INDEX case_id_uac_qid_link_idx ON actionv2.uac_qid_link (case_id);
 
 CREATE INDEX qid_idx ON actionv2.uac_qid_link (qid);
 
