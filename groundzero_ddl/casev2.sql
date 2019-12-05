@@ -1,7 +1,8 @@
 CREATE schema casev2;
 
 CREATE TABLE casev2.cases (
-    case_ref integer NOT NULL,
+    case_id uuid NOT NULL,
+    case_ref integer,
     abp_code varchar(255),
     action_plan_id varchar(255),
     address_level varchar(255),
@@ -10,7 +11,6 @@ CREATE TABLE casev2.cases (
     address_line3 varchar(255),
     address_type varchar(255),
     arid varchar(255),
-    case_id uuid,
     ce_expected_capacity varchar(255),
     collection_exercise_id varchar(255),
     created_date_time timestamp with time zone,
@@ -39,7 +39,8 @@ CREATE TABLE casev2.cases (
     address_invalid boolean NOT NULL DEFAULT FALSE,
     undelivered_as_addressed boolean NOT NULL DEFAULT FALSE,
     ccs_case boolean NOT NULL DEFAULT FALSE,
-    CONSTRAINT cases_pkey PRIMARY KEY (case_ref)
+    secret_sequence_number SERIAL NOT NULL,
+    CONSTRAINT cases_pkey PRIMARY KEY (case_id)
 );
 
 CREATE TABLE casev2.uac_qid_link (
@@ -48,10 +49,10 @@ CREATE TABLE casev2.uac_qid_link (
     batch_id uuid,
     qid varchar(255),
     uac varchar(255),
-    caze_case_ref integer,
+    caze_case_id UUID,
     ccs_case boolean NOT NULL DEFAULT FALSE,
     CONSTRAINT uac_qid_link_pkey PRIMARY KEY (id),
-    FOREIGN KEY (caze_case_ref) REFERENCES casev2.cases
+    FOREIGN KEY (caze_case_id) REFERENCES casev2.cases
 );
 
 CREATE TABLE casev2.event (
@@ -66,14 +67,13 @@ CREATE TABLE casev2.event (
     event_payload jsonb,
     event_source varchar(255),
     event_transaction_id uuid,
-    caze_case_ref integer,
+    caze_case_id UUID,
     CONSTRAINT event_pkey PRIMARY KEY (id),
     CONSTRAINT fk_uac_qid_link FOREIGN KEY (uac_qid_link_id) REFERENCES casev2.uac_qid_link (id),
-    CONSTRAINT fk_case_ref FOREIGN KEY (caze_case_ref) REFERENCES casev2.cases (case_ref)
+    CONSTRAINT fk_case_ref FOREIGN KEY (caze_case_id) REFERENCES casev2.cases (case_id)
 );
 
-
-CREATE INDEX case_id_idx ON casev2.cases (case_id);
+CREATE INDEX case_ref_idx ON casev2.cases (case_ref);
 
 CREATE INDEX lsoa_idx ON casev2.cases (lsoa);
 
