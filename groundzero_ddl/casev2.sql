@@ -41,7 +41,6 @@ CREATE TABLE casev2.cases (
     undelivered_as_addressed boolean NOT NULL DEFAULT FALSE,
     ccs_case boolean NOT NULL DEFAULT FALSE,
     secret_sequence_number SERIAL NOT NULL,
-    
     CONSTRAINT cases_pkey PRIMARY KEY (case_id)
 );
 
