@@ -41,6 +41,7 @@ CREATE TABLE casev2.cases (
     undelivered_as_addressed boolean NOT NULL DEFAULT FALSE,
     ccs_case boolean NOT NULL DEFAULT FALSE,
     secret_sequence_number SERIAL NOT NULL,
+    
     CONSTRAINT cases_pkey PRIMARY KEY (case_id)
 );
 
@@ -69,6 +70,7 @@ CREATE TABLE casev2.event (
     event_source varchar(255),
     event_transaction_id uuid,
     caze_case_id UUID,
+    message_timestamp timestamp with time zone,
     CONSTRAINT event_pkey PRIMARY KEY (id),
     CONSTRAINT fk_uac_qid_link FOREIGN KEY (uac_qid_link_id) REFERENCES casev2.uac_qid_link (id),
     CONSTRAINT fk_case_ref FOREIGN KEY (caze_case_id) REFERENCES casev2.cases (case_id)
