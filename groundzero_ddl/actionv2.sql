@@ -80,6 +80,14 @@ CREATE TABLE actionv2.uac_qid_link (
     CONSTRAINT uac_qid_link_pkey PRIMARY KEY (id)
 );
 
+CREATE TABLE actionv2.fulfilments_to_send (
+    fulfilment_code varchar(255),
+    message_data jsonb,
+    quantity int,
+    batch_id uuid,
+    CONSTRAINT fulfilments_to_send_pkey PRIMARY KEY (fulfilment_code)
+);
+
 
 CREATE INDEX case_id_idx ON actionv2.cases (case_id);
 
