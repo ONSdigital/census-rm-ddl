@@ -81,11 +81,12 @@ CREATE TABLE actionv2.uac_qid_link (
 );
 
 CREATE TABLE actionv2.fulfilments_to_send (
+    id bigserial NOT NULL,
     fulfilment_code varchar(255),
     message_data jsonb,
     quantity int,
     batch_id uuid,
-    CONSTRAINT fulfilments_to_send_pkey PRIMARY KEY (fulfilment_code)
+    CONSTRAINT fulfilments_to_send_pkey PRIMARY KEY (id)
 );
 
 
