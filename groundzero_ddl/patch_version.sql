@@ -1,3 +1,3 @@
-CREATE schema patch_version;
+CREATE schema ddl_version;
 
-CREATE TABLE patch_version (patch_number integer PRIMARY KEY, applied_timestamp timestamp with time zone NOT NULL);
+CREATE TABLE ddl_version.patches (patch_number integer PRIMARY KEY, applied_timestamp timestamp with time zone NOT NULL);
