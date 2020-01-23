@@ -52,7 +52,7 @@ def patch_database(patches_directory, patch_version, db_cursor, db_connection):
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description='Publish each file in a directory as a message to a rabbit queue')
+        description='Run database patches sequentially for a given patch_version')
     parser.add_argument('-v',
                         dest='patch_version',
                         help='Semantic version of the DDL to patch to')
