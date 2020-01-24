@@ -1,4 +1,3 @@
-import argparse
 from datetime import datetime
 from pathlib import Path
 
@@ -50,18 +49,7 @@ def patch_database(patches_directory, patch_version, db_cursor, db_connection):
     print(f'NO PATCHES TO APPLY AT VERSION: {patch_version}')
 
 
-def parse_arguments():
-    parser = argparse.ArgumentParser(
-        description='Run database patches sequentially for a given patch_version')
-    parser.add_argument('-v',
-                        dest='patch_version',
-                        help='Semantic version of the DDL to patch to')
-
-    return parser.parse_args()
-
-
 def main():
-    args = parse_arguments()
     with psycopg2.connect(f"dbname='{Config.DB_NAME}' "
                           f"user='{Config.DB_USERNAME}' "
                           f"host='{Config.DB_HOST}' "
@@ -70,7 +58,7 @@ def main():
                           f"'{Config.DB_USESSL}") as db_connection:
         db_connection.set_session(autocommit=False)
         with db_connection.cursor() as db_cursor:
-            patch_database(PATCHES_DIRECTORY, args.patch_version, db_cursor, db_connection)
+            patch_database(PATCHES_DIRECTORY, Config.PATCH_VERSION, db_cursor, db_connection)
 
 
 if __name__ == '__main__':
