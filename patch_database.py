@@ -27,7 +27,7 @@ def apply_patch(patch_file, patch_number, db_cursor, db_connection):
 
 
 def update_patch_version(patch_version, db_cursor):
-    db_cursor.execute("INSERT INTO ddl_version.version (version, updated_timestamp)"
+    db_cursor.execute("INSERT INTO ddl_version.version (version_tag, updated_timestamp)"
                       " VALUES (%(version)s, %(updated_timestamp)s)",
                       {'version': patch_version,
                        'updated_timestamp': f'{datetime.utcnow().isoformat()}Z'})
