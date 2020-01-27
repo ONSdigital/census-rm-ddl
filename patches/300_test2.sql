@@ -1,1 +1,0 @@
-CREATE schema test2;
