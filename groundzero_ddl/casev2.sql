@@ -22,6 +22,7 @@ CREATE TABLE casev2.cases (
     htc_digital varchar(255),
     htc_willingness varchar(255),
     lad varchar(255),
+    last_updated timestamp with time zone,
     latitude varchar(255),
     longitude varchar(255),
     lsoa varchar(255),
