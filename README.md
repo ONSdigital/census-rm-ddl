@@ -6,3 +6,6 @@ To run:
 
 ## Patching a database
 The script `patch_database.py` is used by RM to run database patches from a tagged release of this repository. This script is invoked from our pipelines and will run in a Kubernetes pod to apply any database patches from files in the tagged release version of this repository.
+
+## Releasing this repo
+When tagging a release of this repo you must update the version and and patch number in [ddl_version.sql](groundzero_ddl/ddl_version.sql)
