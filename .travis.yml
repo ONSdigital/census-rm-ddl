@@ -13,6 +13,7 @@ install:
   - pipenv install --dev --deploy
 
 script:
+  - pipenv check
   - pipenv run flake8
   - pipenv run pytest
 
