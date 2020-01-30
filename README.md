@@ -1,4 +1,4 @@
-# census-rm-ddl
+# census-rm-ddl[![Build Status](https://travis-ci.com/ONSdigital/census-rm-ddl.svg?branch=master)](https://travis-ci.com/ONSdigital/census-rm-ddl)
 Contains ground zero scripts to create all the RM database tables, as well as a script to update the DDL from the master branch of the RM components
 
 To run:
