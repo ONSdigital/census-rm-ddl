@@ -32,7 +32,6 @@ CREATE TABLE casev2.cases (
     postcode varchar(255),
     receipt_received boolean NOT NULL DEFAULT FALSE,
     region varchar(255),
-    state varchar(255),
     town_name varchar(255),
     treatment_code varchar(255),
     uprn varchar(255),
