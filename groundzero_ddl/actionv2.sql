@@ -51,7 +51,6 @@ CREATE TABLE actionv2.cases (
     receipt_received boolean NOT NULL DEFAULT FALSE,
     refusal_received boolean NOT NULL DEFAULT FALSE,
     region varchar(255),
-    state varchar(255),
     town_name varchar(255),
     treatment_code varchar(255),
     undelivered_as_addressed boolean NOT NULL DEFAULT FALSE,
