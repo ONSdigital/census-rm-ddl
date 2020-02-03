@@ -11,6 +11,6 @@ do
   cat header_footer_temp.txt > "copy_$SCRIPT_NAME"
 
   psql "$PSQL_CONNECT_WRITE_MODE" -f copy_$SCRIPT_NAME
-   rm copy_$SCRIPT_NAME
-   rm header_footer_temp.txt
+  rm copy_$SCRIPT_NAME
+  rm header_footer_temp.txt
 done
