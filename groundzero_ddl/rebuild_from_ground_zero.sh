@@ -1,4 +1,4 @@
-cd /groundzero_ddl/
+cd groundzero_ddl
 
 PSQL_CONNECT_WRITE_MODE="sslmode=verify-ca sslrootcert=/root/.postgresql/root.crt sslcert=/root/.postgresql/postgresql.crt sslkey=/root/.postgresql/postgresql.key hostaddr=$DB_HOST user=rmuser password=password dbname=$DB_NAME"
 psql "$PSQL_CONNECT_WRITE_MODE" -f destroy_schemas.sql
