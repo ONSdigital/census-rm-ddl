@@ -6,6 +6,10 @@
 <!--- Has there been any refactoring -->
 <!--- What tests have been written -->
 
+# Checklist
+* [ ] Updated patch number
+* [ ] Updated version_tag
+
 # How to test?
 <!--- Describe in detail how you tested your changes. -->
 <!--- Include details of your testing environment, and the tests you ran to see how your change affects other areas of the code, etc. -->
