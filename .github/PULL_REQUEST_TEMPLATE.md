@@ -7,6 +7,7 @@
 <!--- What tests have been written -->
 
 # Checklist
+Reminder: Make sure to version tag this after the PR is merged
 * [ ] Updated patch number
 * [ ] Updated version_tag
 
