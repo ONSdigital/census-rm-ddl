@@ -55,6 +55,7 @@ CREATE TABLE actionv2.cases (
     treatment_code varchar(255),
     undelivered_as_addressed boolean NOT NULL DEFAULT FALSE,
     uprn varchar(255),
+    hand_delivery boolean NOT NULL DEFAULT FALSE,
     CONSTRAINT cases_pkey PRIMARY KEY (case_ref),
     CONSTRAINT case_id UNIQUE (case_id)
 );
