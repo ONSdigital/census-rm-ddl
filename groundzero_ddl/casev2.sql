@@ -41,7 +41,7 @@ CREATE TABLE casev2.cases (
     undelivered_as_addressed boolean NOT NULL DEFAULT FALSE,
     secret_sequence_number SERIAL NOT NULL,
     survey varchar(255) NOT NULL,
-    hand_delivery boolean NOT NULL DEFAULT FALSE
+    hand_delivery boolean NOT NULL DEFAULT FALSE,
     CONSTRAINT cases_pkey PRIMARY KEY (case_id)
 );
 
