@@ -2,7 +2,7 @@ CREATE schema casev2;
 
 CREATE TABLE casev2.cases (
     case_id uuid NOT NULL,
-    case_ref integer,
+    case_ref bigint,
     abp_code varchar(255),
     action_plan_id varchar(255),
     address_level varchar(255),
