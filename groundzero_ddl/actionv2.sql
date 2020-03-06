@@ -33,6 +33,7 @@ CREATE TABLE actionv2.cases (
     case_type varchar(255),
     ce_actual_responses integer,
     ce_expected_capacity integer,
+    ce_secure boolean NOT NULL DEFAULT FALSE,
     collection_exercise_id varchar(255),
     estab_arid varchar(255),
     estab_type varchar(255),

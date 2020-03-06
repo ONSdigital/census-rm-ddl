@@ -13,6 +13,7 @@ CREATE TABLE casev2.cases (
     arid varchar(255),
     ce_actual_responses integer,
     ce_expected_capacity integer,
+    ce_secure boolean NOT NULL DEFAULT FALSE,
     collection_exercise_id varchar(255),
     created_date_time timestamp with time zone,
     estab_arid varchar(255),
