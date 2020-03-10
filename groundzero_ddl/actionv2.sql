@@ -19,7 +19,7 @@ CREATE TABLE actionv2.action_rule (
 );
 
 CREATE TABLE actionv2.cases (
-    case_ref integer NOT NULL,
+    case_ref bigint NOT NULL,
     abp_code varchar(255),
     action_plan_id varchar(255),
     address_invalid boolean NOT NULL DEFAULT FALSE,
@@ -66,7 +66,7 @@ CREATE TABLE actionv2.case_to_process (
     batch_id uuid,
     batch_quantity int NOT NULL,
     action_rule_id uuid,
-    caze_case_ref int,
+    caze_case_ref bigint,
     CONSTRAINT case_to_process_pkey PRIMARY KEY (id),
     FOREIGN KEY (caze_case_ref) REFERENCES actionv2.cases(case_ref),
     FOREIGN KEY (action_rule_id) REFERENCES actionv2.action_rule(id)
