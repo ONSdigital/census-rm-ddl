@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 rm groundzero_ddl/actionv2.sql
 rm groundzero_ddl/casev2.sql
 rm groundzero_ddl/uacqid.sql
@@ -7,9 +7,28 @@ rm -rf temp_clone
 
 mkdir temp_clone
 cd temp_clone
-git clone https://github.com/ONSdigital/census-rm-case-processor.git
-git clone https://github.com/ONSdigital/census-rm-action-scheduler.git
-git clone git@github.com:ONSdigital/census-rm-uac-qid-service.git
+
+if [ -z "$CASE_PROCESSOR_BRANCH" ]; then
+  git clone https://github.com/ONSdigital/census-rm-case-processor.git
+else
+  echo "Cloning Case Processor branch $CASE_PROCESSOR_BRANCH"
+  git clone --branch $CASE_PROCESSOR_BRANCH https://github.com/ONSdigital/census-rm-case-processor.git
+fi
+
+if [ -z "$ACTION_SCHEDULER_BRANCH" ]; then
+  git clone https://github.com/ONSdigital/census-rm-action-scheduler.git
+else
+  echo "Cloning Action Scheduler branch $ACTION_SCHEDULER_BRANCH"
+  git clone --branch $ACTION_SCHEDULER_BRANCH https://github.com/ONSdigital/census-rm-action-scheduler.git
+fi
+
+if [ -z "$UAC_QID_SERVICE_BRANCH" ]; then
+  git clone git@github.com:ONSdigital/census-rm-uac-qid-service.git
+else
+  echo "Cloning UAC QID Service branch $UAC_QID_SERVICE_BRANCH"
+  git clone --branch $UAC_QID_SERVICE_BRANCH git@github.com:ONSdigital/census-rm-uac-qid-service.git
+fi
+
 cd ..
 
 mkdir -p git_cloned_src/uk/gov/ons/census/casesvc/model/entity
