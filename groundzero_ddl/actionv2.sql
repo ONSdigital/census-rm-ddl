@@ -1,106 +1,106 @@
-CREATE schema actionv2;
 
-CREATE TABLE actionv2.action_plan (
-    id uuid NOT NULL,
-    description varchar(255),
-    name varchar(255),
-    CONSTRAINT action_plan_pkey PRIMARY KEY (id)
-);
+    create table action_plan (
+       id uuid not null,
+        description varchar(255),
+        name varchar(255),
+        primary key (id)
+    );
 
-CREATE TABLE actionv2.action_rule (
-    id uuid NOT NULL,
-    action_type varchar(255),
-    classifiers jsonb,
-    has_triggered boolean,
-    trigger_date_time timestamp WITHOUT TIME ZONE,
-    action_plan_id uuid,
-    CONSTRAINT action_rule_pkey PRIMARY KEY (id),
-    FOREIGN KEY (action_plan_id) REFERENCES actionv2.action_plan
-);
+    create table action_rule (
+       id uuid not null,
+        action_type varchar(255),
+        classifiers jsonb not null,
+        has_triggered boolean,
+        trigger_date_time timestamp with time zone,
+        action_plan_id uuid,
+        primary key (id)
+    );
 
-CREATE TABLE actionv2.cases (
-    case_ref bigint NOT NULL,
-    abp_code varchar(255),
-    action_plan_id varchar(255),
-    address_invalid boolean NOT NULL DEFAULT FALSE,
-    address_level varchar(255),
-    address_line1 varchar(255),
-    address_line2 varchar(255),
-    address_line3 varchar(255),
-    address_type varchar(255),
-    arid varchar(255),
-    case_id uuid,
-    case_type varchar(255),
-    ce_actual_responses integer,
-    ce_expected_capacity integer,
-    collection_exercise_id varchar(255),
-    estab_arid varchar(255),
-    estab_type varchar(255),
-    field_coordinator_id varchar(255),
-    field_officer_id varchar(255),
-    htc_digital varchar(255),
-    htc_willingness varchar(255),
-    lad varchar(255),
-    latitude varchar(255),
-    longitude varchar(255),
-    lsoa varchar(255),
-    msoa varchar(255),
-    oa varchar(255),
-    organisation_name varchar(255),
-    postcode varchar(255),
-    receipt_received boolean NOT NULL DEFAULT FALSE,
-    refusal_received boolean NOT NULL DEFAULT FALSE,
-    region varchar(255),
-    town_name varchar(255),
-    treatment_code varchar(255),
-    undelivered_as_addressed boolean NOT NULL DEFAULT FALSE,
-    uprn varchar(255),
-    hand_delivery boolean NOT NULL DEFAULT FALSE,
-    CONSTRAINT cases_pkey PRIMARY KEY (case_ref),
-    CONSTRAINT case_id UNIQUE (case_id)
-);
+    create table cases (
+       case_ref int8 not null,
+        abp_code varchar(255),
+        action_plan_id varchar(255),
+        address_invalid BOOLEAN DEFAULT false not null,
+        address_level varchar(255),
+        address_line1 varchar(255),
+        address_line2 varchar(255),
+        address_line3 varchar(255),
+        address_type varchar(255),
+        arid varchar(255),
+        case_id uuid not null,
+        case_type varchar(255),
+        ce_actual_responses int4,
+        ce_expected_capacity int4,
+        collection_exercise_id varchar(255),
+        estab_arid varchar(255),
+        estab_type varchar(255),
+        field_coordinator_id varchar(255),
+        field_officer_id varchar(255),
+        hand_delivery BOOLEAN DEFAULT false,
+        htc_digital varchar(255),
+        htc_willingness varchar(255),
+        lad varchar(255),
+        latitude varchar(255),
+        longitude varchar(255),
+        lsoa varchar(255),
+        msoa varchar(255),
+        oa varchar(255),
+        organisation_name varchar(255),
+        postcode varchar(255),
+        receipt_received BOOLEAN DEFAULT false not null,
+        refusal_received BOOLEAN DEFAULT false not null,
+        region varchar(255),
+        town_name varchar(255),
+        treatment_code varchar(255),
+        undelivered_as_addressed BOOLEAN DEFAULT false not null,
+        uprn varchar(255),
+        primary key (case_ref)
+    );
 
-CREATE TABLE actionv2.case_to_process (
-    id bigserial NOT NULL,
-    batch_id uuid,
-    batch_quantity int NOT NULL,
-    action_rule_id uuid,
-    caze_case_ref bigint,
-    CONSTRAINT case_to_process_pkey PRIMARY KEY (id),
-    FOREIGN KEY (caze_case_ref) REFERENCES actionv2.cases(case_ref),
-    FOREIGN KEY (action_rule_id) REFERENCES actionv2.action_rule(id)
-);
+    create table case_to_process (
+       id  bigserial not null,
+        batch_id uuid,
+        batch_quantity int4 not null,
+        action_rule_id uuid,
+        caze_case_ref int8,
+        primary key (id)
+    );
 
-CREATE TABLE actionv2.uac_qid_link (
-    id uuid NOT NULL,
-    active boolean,
-    case_id varchar(255),
-    qid varchar(255),
-    uac varchar(255),
-    CONSTRAINT uac_qid_link_pkey PRIMARY KEY (id)
-);
+    create table fulfilment_to_send (
+       id  bigserial not null,
+        batch_id uuid,
+        fulfilment_code varchar(255),
+        message_data jsonb not null,
+        quantity int4,
+        primary key (id)
+    );
 
-CREATE TABLE actionv2.fulfilment_to_send (
-    id bigserial NOT NULL,
-    fulfilment_code varchar(255),
-    message_data jsonb,
-    quantity int,
-    batch_id uuid,
-    CONSTRAINT fulfilments_to_send_pkey PRIMARY KEY (id)
-);
+    create table uac_qid_link (
+       id uuid not null,
+        active boolean,
+        case_id varchar(255),
+        qid varchar(255),
+        uac varchar(255),
+        primary key (id)
+    );
+create index receipt_received_idx on cases (receipt_received);
+create index cases_case_id_idx on cases (case_id);
+create index treatment_code_idx on cases (treatment_code);
+create index lsoa_idx on cases (lsoa);
+create index uacqid_case_id_idx on uac_qid_link (case_id);
+create index qid_idx on uac_qid_link (qid);
 
+    alter table if exists action_rule 
+       add constraint FKh8d80cpj6kkb8rntu3iosln4e 
+       foreign key (action_plan_id) 
+       references action_plan;
 
-CREATE INDEX case_id_idx ON actionv2.cases (case_id);
+    alter table if exists case_to_process 
+       add constraint FKmqcrb58vhx7a7qcyyjjvm1y31 
+       foreign key (action_rule_id) 
+       references action_rule;
 
-CREATE INDEX lsoa_idx ON actionv2.cases (lsoa);
-
-CREATE INDEX receipt_received_idx ON actionv2.cases (receipt_received);
-
-CREATE INDEX treatment_code_idx ON actionv2.cases (treatment_code);
-
-CREATE INDEX case_id_uac_qid_link_idx ON actionv2.uac_qid_link (case_id);
-
-CREATE INDEX qid_idx ON actionv2.uac_qid_link (qid);
-
-
-
+    alter table if exists case_to_process 
+       add constraint FKfji3l4gnuwiha7gcdquu44fak 
+       foreign key (caze_case_ref) 
+       references cases;
