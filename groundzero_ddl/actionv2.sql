@@ -11,13 +11,13 @@
         action_type varchar(255),
         classifiers jsonb not null,
         has_triggered boolean,
-        trigger_date_time timestamp,
+        trigger_date_time timestamp with time zone,
         action_plan_id uuid,
         primary key (id)
     );
 
     create table cases (
-       case_ref int4 not null,
+       case_ref int8 not null,
         abp_code varchar(255),
         action_plan_id varchar(255),
         address_invalid BOOLEAN DEFAULT false not null,
@@ -27,7 +27,7 @@
         address_line3 varchar(255),
         address_type varchar(255),
         arid varchar(255),
-        case_id uuid,
+        case_id uuid not null,
         case_type varchar(255),
         ce_actual_responses int4,
         ce_expected_capacity int4,
@@ -62,7 +62,7 @@
         batch_id uuid,
         batch_quantity int4 not null,
         action_rule_id uuid,
-        caze_case_ref int4,
+        caze_case_ref int8,
         primary key (id)
     );
 
@@ -84,11 +84,11 @@
         primary key (id)
     );
 create index receipt_received_idx on cases (receipt_received);
+create index cases_case_id_idx on cases (case_id);
 create index treatment_code_idx on cases (treatment_code);
-
-    alter table if exists cases 
-       add constraint case_id_idx unique (case_id);
-create index IDXrgnvkth2i8y3wlpclgv0vo2mc on uac_qid_link (case_id);
+create index lsoa_idx on cases (lsoa);
+create index uacqid_case_id_idx on uac_qid_link (case_id);
+create index qid_idx on uac_qid_link (qid);
 
     alter table if exists action_rule 
        add constraint FKh8d80cpj6kkb8rntu3iosln4e 

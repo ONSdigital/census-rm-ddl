@@ -10,7 +10,7 @@
         address_line3 varchar(255),
         address_type varchar(255),
         arid varchar(255),
-        case_ref int4,
+        case_ref int8,
         case_type varchar(255),
         ce_actual_responses int4,
         ce_expected_capacity int4,
@@ -70,6 +70,11 @@
         caze_case_id uuid,
         primary key (id)
     );
+create index cases_case_ref_idx on cases (case_ref);
+create index lsoa_idx on cases (lsoa);
+create index event_type_idx on event (event_type);
+create index rm_event_processed_idx on event (rm_event_processed);
+create index qid_idx on uac_qid_link (qid);
 
     alter table if exists event 
        add constraint FKkrvohvnibf3k12ljhgiqrqicj 
