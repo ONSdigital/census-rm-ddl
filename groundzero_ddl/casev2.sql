@@ -1,50 +1,4 @@
 
-CREATE TABLE casev2.cases (
-    case_id uuid NOT NULL,
-    case_ref bigint,
-    abp_code varchar(255),
-    action_plan_id varchar(255),
-    address_level varchar(255),
-    address_line1 varchar(255),
-    address_line2 varchar(255),
-    address_line3 varchar(255),
-    address_type varchar(255),
-    arid varchar(255),
-    ce_actual_responses integer,
-    ce_expected_capacity integer,
-    collection_exercise_id varchar(255),
-    created_date_time timestamp with time zone,
-    estab_arid varchar(255),
-    estab_type varchar(255),
-    field_coordinator_id varchar(255),
-    field_officer_id varchar(255),
-    htc_digital varchar(255),
-    htc_willingness varchar(255),
-    lad varchar(255),
-    last_updated timestamp with time zone,
-    latitude varchar(255),
-    longitude varchar(255),
-    lsoa varchar(255),
-    msoa varchar(255),
-    oa varchar(255),
-    organisation_name varchar(255),
-    postcode varchar(255),
-    receipt_received boolean NOT NULL DEFAULT FALSE,
-    region varchar(255),
-    town_name varchar(255),
-    treatment_code varchar(255),
-    uprn varchar(255),
-    refusal_received boolean NOT NULL DEFAULT FALSE,
-    case_type varchar(255),
-    address_invalid boolean NOT NULL DEFAULT FALSE,
-    undelivered_as_addressed boolean NOT NULL DEFAULT FALSE,
-    secret_sequence_number SERIAL NOT NULL,
-    survey varchar(255) NOT NULL,
-    hand_delivery boolean NOT NULL DEFAULT FALSE,
-    metadata jsonb,
-    CONSTRAINT cases_pkey PRIMARY KEY (case_id)
-);
-
     create table cases (
        case_id uuid not null,
         abp_code varchar(255),
@@ -74,6 +28,7 @@ CREATE TABLE casev2.cases (
         latitude varchar(255),
         longitude varchar(255),
         lsoa varchar(255),
+        metadata jsonb,
         msoa varchar(255),
         oa varchar(255),
         organisation_name varchar(255),
@@ -116,7 +71,6 @@ CREATE TABLE casev2.cases (
         caze_case_id uuid,
         primary key (id)
     );
-
 create index cases_case_ref_idx on cases (case_ref);
 create index lsoa_idx on cases (lsoa);
 create index event_type_idx on event (event_type);
