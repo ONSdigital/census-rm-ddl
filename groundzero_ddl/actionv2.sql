@@ -43,6 +43,7 @@
         latitude varchar(255),
         longitude varchar(255),
         lsoa varchar(255),
+        metadata jsonb,
         msoa varchar(255),
         oa varchar(255),
         organisation_name varchar(255),
