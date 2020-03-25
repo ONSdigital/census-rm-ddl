@@ -51,6 +51,7 @@
         receipt_received BOOLEAN DEFAULT false not null,
         refusal_received BOOLEAN DEFAULT false not null,
         region varchar(255),
+        skellington BOOLEAN DEFAULT false,
         town_name varchar(255),
         treatment_code varchar(255),
         undelivered_as_addressed BOOLEAN DEFAULT false not null,

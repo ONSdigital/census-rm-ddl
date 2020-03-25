@@ -1,0 +1,5 @@
+ALTER TABLE actionv2.cases
+    ADD COLUMN IF NOT EXISTS skellington boolean NOT NULL DEFAULT FALSE;
+
+ALTER TABLE casev2.cases
+    ADD COLUMN IF NOT EXISTS skellington boolean NOT NULL DEFAULT FALSE;

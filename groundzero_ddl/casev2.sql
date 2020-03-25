@@ -37,6 +37,7 @@
         refusal_received BOOLEAN DEFAULT false not null,
         region varchar(255),
         secret_sequence_number serial,
+        skellington BOOLEAN DEFAULT false,
         survey varchar(255) not null,
         town_name varchar(255),
         treatment_code varchar(255),
