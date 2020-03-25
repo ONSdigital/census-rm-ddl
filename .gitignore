@@ -3,3 +3,6 @@
 target/*
 .java-version
 .DS_Store
+__pychache__
+.pytest_cache/*
+.settings/*
