@@ -15,3 +15,9 @@ ADD COLUMN estab_uprn varchar(255);
 
 ALTER TABLE casev2.cases
 ADD COLUMN estab_uprn varchar(255);
+
+ALTER TABLE actionv2.cases
+ADD COLUMN print_batch varchar(255);
+
+ALTER TABLE casev2.cases
+ADD COLUMN print_batch varchar(255);
