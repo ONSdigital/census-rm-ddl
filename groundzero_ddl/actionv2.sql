@@ -54,7 +54,6 @@
         skeleton BOOLEAN DEFAULT false,
         town_name varchar(255),
         treatment_code varchar(255),
-        undelivered_as_addressed BOOLEAN DEFAULT false not null,
         uprn varchar(255),
         primary key (case_ref)
     );
