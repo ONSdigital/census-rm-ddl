@@ -41,7 +41,6 @@
         survey varchar(255) not null,
         town_name varchar(255),
         treatment_code varchar(255),
-        undelivered_as_addressed BOOLEAN DEFAULT false not null,
         uprn varchar(255),
         primary key (case_id)
     );
@@ -66,6 +65,7 @@
        id uuid not null,
         active boolean,
         batch_id uuid,
+        blank_questionnaire BOOLEAN DEFAULT false not null,
         ccs_case BOOLEAN DEFAULT false not null,
         qid varchar(255),
         uac varchar(255),
