@@ -62,6 +62,7 @@
        id  bigserial not null,
         batch_id uuid,
         batch_quantity int4 not null,
+        ce_expected_capacity int4,
         action_rule_id uuid,
         caze_case_ref int8,
         primary key (id)
