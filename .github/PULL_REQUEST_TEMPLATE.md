@@ -10,6 +10,7 @@
 Reminder: Make sure to version tag this after the PR is merged
 * [ ] Updated patch number
 * [ ] Updated version_tag
+* [ ] Updated version tag in kubernetes yaml
 
 # How to test?
 <!--- Describe in detail how you tested your changes. -->
