@@ -8,4 +8,3 @@ class Config:
     DB_PORT = os.getenv('DB_PORT', '6432')
     DB_NAME = os.getenv('DB_NAME', 'postgres')
     DB_USESSL = os.getenv('DB_USESSL', '')
-    DDL_VERSION_TAG = os.getenv('DDL_VERSION_TAG')
