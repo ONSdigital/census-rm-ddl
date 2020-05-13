@@ -9,7 +9,8 @@
 # Checklist
 Reminder: Make sure to version tag this after the PR is merged
 * [ ] Updated patch number
-* [ ] Updated version_tag
+* [ ] Updated version_tag in `ddl_version.sql`
+* [ ] Updated current_version in `patch_database.py`
 
 # How to test?
 <!--- Describe in detail how you tested your changes. -->

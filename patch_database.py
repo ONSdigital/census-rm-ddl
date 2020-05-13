@@ -7,6 +7,9 @@ from config import Config
 
 PATCHES_DIRECTORY = Path(__file__).parent.joinpath('patches')
 
+# current_version should match the version in the ddl_version.sql file
+current_version = 'v2.2.0'
+
 
 def get_current_patch_number(db_cursor):
     db_cursor.execute('SELECT MAX(patch_number) FROM ddl_version.patches')
@@ -65,11 +68,11 @@ def main():
                           f"'{Config.DB_USESSL}") as db_connection:
         db_connection.set_session(autocommit=False)
         with db_connection.cursor() as db_cursor:
-            if Config.DDL_VERSION_TAG == get_current_database_version_tag(db_cursor):
-                print(f'Database is already at {Config.DDL_VERSION_TAG}')
+            if current_version == get_current_database_version_tag(db_cursor):
+                print(f'Database is already at {current_version}')
                 return
 
-            patch_database(PATCHES_DIRECTORY, Config.DDL_VERSION_TAG, db_cursor, db_connection)
+            patch_database(PATCHES_DIRECTORY, current_version, db_cursor, db_connection)
 
 
 if __name__ == '__main__':
