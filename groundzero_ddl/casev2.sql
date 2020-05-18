@@ -78,7 +78,10 @@ create index cases_case_ref_idx on cases (case_ref);
 create index lsoa_idx on cases (lsoa);
 create index event_type_idx on event (event_type);
 create index rm_event_processed_idx on event (rm_event_processed);
+create index event_uac_qid_link_id on event (uac_qid_link_id);
+create index event_caze_case_id on event (caze_case_id);
 create index qid_idx on uac_qid_link (qid);
+create index uac_qid_caze_case_id on uac_qid_link (caze_case_id);
 
     alter table if exists event 
        add constraint FKkrvohvnibf3k12ljhgiqrqicj 
