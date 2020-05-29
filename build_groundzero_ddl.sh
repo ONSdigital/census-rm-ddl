@@ -33,7 +33,7 @@ fi
 if [ -z "$EXCEPTION_MANAGER_BRANCH" ]; then
   git clone git@github.com:ONSdigital/census-rm-exception-manager.git
 else
-  echo "Cloning UAC QID Service branch $EXCEPTION_MANAGER_BRANCH"
+  echo "Cloning Exception Manager branch $EXCEPTION_MANAGER_BRANCH"
   git clone --branch $EXCEPTION_MANAGER_BRANCH git@github.com:ONSdigital/census-rm-exception-manager.git
 fi
 
