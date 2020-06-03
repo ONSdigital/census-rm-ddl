@@ -34,7 +34,7 @@
         postcode varchar(255),
         print_batch varchar(255),
         receipt_received BOOLEAN DEFAULT false not null,
-        refusal_received BOOLEAN DEFAULT false not null,
+        refusal_received varchar(255),
         region varchar(255),
         secret_sequence_number serial,
         skeleton BOOLEAN DEFAULT false,
