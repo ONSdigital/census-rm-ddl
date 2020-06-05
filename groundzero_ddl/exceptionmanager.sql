@@ -1,4 +1,10 @@
 
+    create table auto_quarantine_rule (
+       id uuid not null,
+        expression varchar(255),
+        primary key (id)
+    );
+
     create table quarantined_message (
        id uuid not null,
         content_type varchar(255),
