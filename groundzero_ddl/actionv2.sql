@@ -52,6 +52,7 @@
         refusal_received varchar(255),
         region varchar(255),
         skeleton BOOLEAN DEFAULT false,
+        survey_launched BOOLEAN DEFAULT false not null,
         town_name varchar(255),
         treatment_code varchar(255),
         uprn varchar(255),
