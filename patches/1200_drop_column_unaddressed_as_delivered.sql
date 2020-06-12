@@ -1,4 +1,3 @@
-
 ALTER table actionv2.cases
     DROP COLUMN undelivered_as_addressed;
 
