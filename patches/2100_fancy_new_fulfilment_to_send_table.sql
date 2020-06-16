@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS actionv2.fulfilment_to_send;
 
 set schema 'actionv2';
 
-create table fulfilment_to_process (
+create table if not exists fulfilment_to_process (
    id  bigserial not null,
     action_type varchar(255),
     address_line1 varchar(255),
