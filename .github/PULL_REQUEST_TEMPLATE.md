@@ -7,6 +7,9 @@
 <!--- What tests have been written -->
 
 # Checklist
+Reminder: Make you have run `build_groundzero_ddl.sh` and not manually edited the ground zero DDL.
+* [ ] Have run automated script, not made manual changes
+
 Reminder: Make sure to version tag this after the PR is merged
 * [ ] Updated patch number
 * [ ] Updated version_tag in `ddl_version.sql`
