@@ -4,10 +4,13 @@ Contains ground zero scripts to create all the RM database tables, as well as a 
 To run:
 `build_groundzero_ddl.sh`
 
-If you have made changes to Action Scheduler, Case Processor or the UAC-QID Service and you need to re-generate the ground zero DDL, you can specify specific branches with the following options:
+It's very important that the DDL script to build ground zero is run, instead of manually editing the files in the `groundzero_ddl` directory, so that the database is always perfectly in sync with the code on the master branch.
+
+If you have made changes to Action Scheduler, Case Processor, Exception Manager or the UAC-QID Service and you need to re-generate the ground zero DDL, you can specify specific branches with the following options:
 - `CASE_PROCESSOR_BRANCH`
 - `ACTION_SCHEDULER_BRANCH`
 - `UAC_QID_SERVICE_BRANCH`
+- `EXCEPTION_MANAGER_BRANCH`
 
 For example, you might want to run `CASE_PROCESSOR_BRANCH=example-branch build_groundzero_ddl.sh` to get the groundzero DDL to be generated for an as-yet unmerged branch called `example-branch`.
 
