@@ -9,9 +9,9 @@
     create table action_rule (
        id uuid not null,
         action_type varchar(255),
-        classifiers jsonb not null,
         has_triggered boolean,
         trigger_date_time timestamp with time zone,
+        user_defined_where_clause varchar(100000) not null,
         action_plan_id uuid,
         primary key (id)
     );
