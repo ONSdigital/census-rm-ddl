@@ -9,7 +9,7 @@
     create table action_rule (
        id uuid not null,
         action_type varchar(255),
-        classifiers jsonb not null,
+        classifiers_clause text not null,
         has_triggered boolean,
         trigger_date_time timestamp with time zone,
         action_plan_id uuid,
