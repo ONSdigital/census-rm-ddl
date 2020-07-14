@@ -2,7 +2,7 @@
     create table cases (
        case_id uuid not null,
         abp_code varchar(255),
-        action_plan_id varchar(255),
+        action_plan_id uuid,
         address_invalid BOOLEAN DEFAULT false not null,
         address_level varchar(255),
         address_line1 varchar(255),
@@ -13,7 +13,7 @@
         case_type varchar(255),
         ce_actual_responses int4,
         ce_expected_capacity int4,
-        collection_exercise_id varchar(255),
+        collection_exercise_id uuid,
         created_date_time timestamp with time zone,
         estab_type varchar(255),
         estab_uprn varchar(255),
