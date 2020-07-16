@@ -8,3 +8,7 @@ class Config:
     DB_PORT = os.getenv('DB_PORT', '6432')
     DB_NAME = os.getenv('DB_NAME', 'postgres')
     DB_USESSL = os.getenv('DB_USESSL', '')
+    DB_HOST_ACTION = os.getenv('DB_HOST_ACTION', 'localhost')
+    DB_ACTION_CERTIFICATES = (" sslmode=verify-ca sslrootcert=/root/.postgresql-action/root.crt "
+                              "sslcert=/root/.postgresql-action/postgresql.crt "
+                              "sslkey=/root/.postgresql-action/postgresql.key")

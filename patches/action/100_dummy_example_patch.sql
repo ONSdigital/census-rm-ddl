@@ -1,0 +1,1 @@
+select 1; -- This patch doesn't do anything... it's just to prove out the patching of the Action DB
