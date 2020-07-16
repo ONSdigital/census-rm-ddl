@@ -1,5 +1,9 @@
 import os
 
+PEP8_FUSS_CERTS = (" sslmode=verify-ca sslrootcert=/home/toolbox/.postgresql-action/root.crt "
+                   "sslcert=/home/toolbox/.postgresql-action/postgresql.crt "
+                   "sslkey=/home/toolbox/.postgresql-action/postgresql.key")
+
 
 class Config:
     DB_USERNAME = os.getenv('DB_USERNAME', 'postgres')
@@ -9,6 +13,4 @@ class Config:
     DB_NAME = os.getenv('DB_NAME', 'postgres')
     DB_USESSL = os.getenv('DB_USESSL', '')
     DB_HOST_ACTION = os.getenv('DB_HOST_ACTION', 'localhost')
-    DB_ACTION_CERTIFICATES = (" sslmode=verify-ca sslrootcert=/root/.postgresql-action/root.crt "
-                              "sslcert=/root/.postgresql-action/postgresql.crt "
-                              "sslkey=/root/.postgresql-action/postgresql.key")
+    DB_ACTION_CERTIFICATES = os.getenv('DB_ACTION_CERTIFICATES', PEP8_FUSS_CERTS)
