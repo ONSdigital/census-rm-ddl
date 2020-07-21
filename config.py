@@ -1,8 +1,8 @@
 import os
 
-ACTION_CERTS = (" sslmode=verify-ca sslrootcert=/home/toolbox/.postgresql-action/root.crt "
-                "sslcert=/home/toolbox/.postgresql-action/postgresql.crt "
-                "sslkey=/home/toolbox/.postgresql-action/postgresql.key")
+ACTION_CERTS = (" sslmode=verify-ca sslrootcert=/root/.postgresql-action/root.crt "
+                "sslcert=/root/.postgresql-action/postgresql.crt "
+                "sslkey=/root/.postgresql-action/postgresql.key")
 
 
 class Config:
