@@ -5,10 +5,14 @@ import psycopg2
 
 from config import Config
 
-PATCHES_DIRECTORY = Path(__file__).parent.joinpath('patches')
+PATCHES_DIRECTORY = Path(__file__).parent.joinpath('patches/main')
+PATCHES_DIRECTORY_ACTION = Path(__file__).parent.joinpath('patches/action')
 
 # current_version should match the version in the ddl_version.sql file
 current_version = 'v4.2.0'
+
+# current_version_action should match the version in the ACTION-ddl_version.sql file
+current_version_action = 'v1.0.0'
 
 
 def get_current_patch_number(db_cursor):
@@ -70,9 +74,22 @@ def main():
         with db_connection.cursor() as db_cursor:
             if current_version == get_current_database_version_tag(db_cursor):
                 print(f'Database is already at {current_version}')
+            else:
+                patch_database(PATCHES_DIRECTORY, current_version, db_cursor, db_connection)
+
+    with psycopg2.connect(f"dbname='{Config.DB_NAME}' "
+                          f"user='{Config.DB_USERNAME}' "
+                          f"host='{Config.DB_HOST_ACTION}' "
+                          f"password='{Config.DB_PASSWORD}' "
+                          f"port='{Config.DB_PORT}"
+                          f"'{Config.DB_USESSL}{Config.DB_ACTION_CERTIFICATES}") as db_connection:
+        db_connection.set_session(autocommit=False)
+        with db_connection.cursor() as db_cursor:
+            if current_version_action == get_current_database_version_tag(db_cursor):
+                print(f'Action database is already at {current_version_action}')
                 return
 
-            patch_database(PATCHES_DIRECTORY, current_version, db_cursor, db_connection)
+            patch_database(PATCHES_DIRECTORY_ACTION, current_version_action, db_cursor, db_connection)
 
 
 if __name__ == '__main__':
