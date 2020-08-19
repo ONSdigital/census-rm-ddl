@@ -73,7 +73,6 @@
 
     create table fulfilment_to_process (
        id  bigserial not null,
-        action_type varchar(255),
         address_line1 varchar(255),
         address_line2 varchar(255),
         address_line3 varchar(255),
@@ -82,6 +81,7 @@
         field_officer_id varchar(255),
         forename varchar(255),
         fulfilment_code varchar(255),
+        fulfilment_type varchar(255),
         organisation_name varchar(255),
         postcode varchar(255),
         quantity int4,
