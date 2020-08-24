@@ -70,6 +70,7 @@
         ccs_case BOOLEAN DEFAULT false not null,
         created_date_time timestamp with time zone,
         last_updated timestamp with time zone,
+        metadata jsonb,
         qid varchar(255),
         uac varchar(255),
         caze_case_id uuid,
