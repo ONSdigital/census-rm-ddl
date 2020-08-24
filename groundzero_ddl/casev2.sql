@@ -85,7 +85,7 @@ create index event_caze_case_id on event (caze_case_id);
 create index qid_idx on uac_qid_link (qid);
 create index uac_qid_caze_case_id on uac_qid_link (caze_case_id);
 
-    alter table if exists event
+    alter table if exists event 
        add constraint FKkrvohvnibf3k12ljhgiqrqicj 
        foreign key (caze_case_id) 
        references cases;
