@@ -1,0 +1,1 @@
+ALTER TABLE actionv2.fulfilment_to_process RENAME action_type TO fulfilment_type;
