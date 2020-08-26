@@ -9,7 +9,7 @@ PATCHES_DIRECTORY = Path(__file__).parent.joinpath('patches/main')
 PATCHES_DIRECTORY_ACTION = Path(__file__).parent.joinpath('patches/action')
 
 # current_version should match the version in the ddl_version.sql file
-current_version = 'v4.3.0'
+current_version = 'v4.4.0'
 
 # current_version_action should match the version in the ACTION-ddl_version.sql file
 current_version_action = 'v1.2.0'
