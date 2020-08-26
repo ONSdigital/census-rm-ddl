@@ -19,5 +19,11 @@ Once you have run the the `build_groundzero_ddl.sh` script, you will be able to 
 ## Patching a database
 The script `patch_database.py` is used by RM to run database patches from a tagged release of this repository. This script is invoked from our pipelines and will run in a Kubernetes pod to apply any database patches from files in the tagged release version of this repository.
 
+## Manually applied indexes
+[manually_applied_indexes.sql]() Contains indexes we can't or don't want to create in the ground zero scripts. It can be manually run into the database after the main/largest sample load to keep ingest times as fast as possible.
+
+Indexes:
+* postcode_upper_no_space_idx - Index for case/space insensitive postcode search
+
 ## Releasing this repo
 When tagging a release of this repo you must update the version and and patch number in [ddl_version.sql](groundzero_ddl/ddl_version.sql) and update the current_version variable in [patch_database.py](patch_database.py)
