@@ -1,7 +1,7 @@
 cd groundzero_ddl
 
-PSQL_CONNECT_WRITE_MODE="sslmode=verify-ca sslrootcert=/root/.postgresql/root.crt sslcert=/root/.postgresql/postgresql.crt sslkey=/root/.postgresql/postgresql.key hostaddr=$DB_HOST user=rmuser password=password dbname=$DB_NAME"
-PSQL_ACTIONCONNECT_WRITE_MODE="sslmode=verify-ca sslrootcert=/root/.postgresql-action/root.crt sslcert=/root/.postgresql-action/postgresql.crt sslkey=/root/.postgresql-action/postgresql.key hostaddr=$DB_HOST_ACTION user=rmuser password=password dbname=$DB_NAME"
+PSQL_CONNECT_WRITE_MODE="sslmode=verify-ca sslrootcert=/root/.postgresql/root.crt sslcert=/root/.postgresql/postgresql.crt sslkey=/root/.postgresql/postgresql.key hostaddr=$DB_HOST user=rmuser password=${PASSWORD:=password} dbname=$DB_NAME"
+PSQL_ACTIONCONNECT_WRITE_MODE="sslmode=verify-ca sslrootcert=/root/.postgresql-action/root.crt sslcert=/root/.postgresql-action/postgresql.crt sslkey=/root/.postgresql-action/postgresql.key hostaddr=$DB_HOST_ACTION user=rmuser password=${PASSWORD:=password} dbname=$DB_NAME"
 
 psql "$PSQL_CONNECT_WRITE_MODE" -f destroy_schemas.sql
 psql "$PSQL_ACTIONCONNECT_WRITE_MODE" -f ACTION-destroy_schemas.sql
