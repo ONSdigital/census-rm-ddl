@@ -1,3 +1,5 @@
 [run]
 omit =
     test/*
+[report]
+fail_under = 50
