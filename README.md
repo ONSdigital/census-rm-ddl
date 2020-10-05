@@ -25,5 +25,10 @@ The script `patch_database.py` is used by RM to run database patches from a tagg
 Indexes:
 * postcode_upper_no_space_idx - Index for case/space insensitive postcode search
 
+## Manually applied rollback scripts
+[backout_for_releases]() contains scripts which we will use as a part of a release, when we need to backout.
+
+There should be a subdirectory per release, and the scripts should be numbered in the order they should be run, and contain the name of the cloud SQL instance they should be run into (i.e. case or action).
+
 ## Releasing this repo
 When tagging a release of this repo you must update the version and and patch number in [ddl_version.sql](groundzero_ddl/ddl_version.sql) and update the current_version variable in [patch_database.py](patch_database.py)
