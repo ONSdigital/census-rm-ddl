@@ -11,7 +11,7 @@
         address_type varchar(255),
         case_ref int8,
         case_type varchar(255),
-        ce_actual_responses int4,
+        ce_actual_responses int4 not null,
         ce_expected_capacity int4,
         collection_exercise_id uuid,
         created_date_time timestamp with time zone,

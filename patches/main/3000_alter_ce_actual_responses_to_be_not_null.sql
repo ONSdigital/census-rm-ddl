@@ -1,0 +1,1 @@
+ALTER TABLE casev2.cases ALTER COLUMN ce_actual_responses SET NOT NULL;
